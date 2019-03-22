@@ -1,10 +1,12 @@
-package com.zhoujie.service;
+package com.zhoujie.service.impl;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import javax.annotation.Resource;
+
 import org.springframework.stereotype.Service;
 
 import com.zhoujie.dao.UserDao;
 import com.zhoujie.model.User;
+import com.zhoujie.service.UserService;
 
 /** 
 * @author zhoujie
@@ -12,9 +14,10 @@ import com.zhoujie.model.User;
 @Service("userService")
 public class UserServiceImpl implements UserService {
 
-	@Autowired(required =false)
+	@Resource
 	public UserDao userDao;
 	
+	@Override
 	public User getUserById(int id) {
 		return userDao.selectByPrimaryKey(id);
 	}
