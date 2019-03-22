@@ -50,4 +50,12 @@ public interface UserDao {
      * @mbggenerated
      */
     int updateByPrimaryKey(User record);
+    
+    /**
+     * Login
+     * @param username
+     * @param password
+     * @return
+     */
+    User loginByIdAndPass(String username , String password);
 }

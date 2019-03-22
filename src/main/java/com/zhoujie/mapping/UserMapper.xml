@@ -100,4 +100,8 @@
       password = #{password,jdbcType=VARCHAR}
     where userId = #{userid,jdbcType=INTEGER}
   </update>
+  
+  <select id="loginByIdAndPass" parameterType="com.zhoujie.model.User" resultType="com.zhoujie.model.User">
+  	select * from t_user where userName = #{username,jdbcType=VARCHAR} and password = #{password,jdbcType=VARCHAR}
+  </select>
 </mapper>

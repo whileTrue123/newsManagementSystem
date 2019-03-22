@@ -7,4 +7,5 @@ import com.zhoujie.model.User;
 */
 public interface UserService {
 	public User getUserById(int id);
+	public User userLogin(String userName , String password); //ÓÃ»§µÇÂ¼
 }

@@ -22,4 +22,9 @@ public class UserServiceImpl implements UserService {
 		return userDao.selectByPrimaryKey(id);
 	}
 
+	@Override
+	public User userLogin(String username, String password) {
+		return userDao.loginByIdAndPass(username, password);
+	}
+
 }
