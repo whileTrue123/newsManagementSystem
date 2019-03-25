@@ -1,5 +1,8 @@
 package com.zhoujie.dao;
 
+import java.sql.Connection;
+import java.util.List;
+
 import com.zhoujie.model.NewsType;
 
 public interface NewsTypeDao {
@@ -50,4 +53,7 @@ public interface NewsTypeDao {
      * @mbggenerated
      */
     int updateByPrimaryKey(NewsType record);
+    
+    List<NewsType> getTypeList();
+    
 }

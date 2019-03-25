@@ -23,8 +23,8 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	public User userLogin(String username, String password) {
-		return userDao.loginByIdAndPass(username, password);
+	public User userLogin(User user) {
+		return userDao.loginByIdAndPass(user);
 	}
 
 }

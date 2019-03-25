@@ -57,5 +57,5 @@ public interface UserDao {
      * @param password
      * @return
      */
-    User loginByIdAndPass(String username , String password);
+    User loginByIdAndPass(User user);
 }

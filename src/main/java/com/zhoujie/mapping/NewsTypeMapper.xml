@@ -87,4 +87,8 @@
     set typeName = #{typename,jdbcType=VARCHAR}
     where newsTypeId = #{newstypeid,jdbcType=INTEGER}
   </update>
+  
+  <select id="getTypeList" resultType="com.zhoujie.model.NewsType">
+  	select * from t_user
+  </select>
 </mapper>
