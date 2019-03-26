@@ -15,7 +15,7 @@ import com.zhoujie.service.UserService;
 public class UserServiceImpl implements UserService {
 
 	@Resource
-	public UserDao userDao;
+	private UserDao userDao;
 	
 	@Override
 	public User getUserById(int id) {

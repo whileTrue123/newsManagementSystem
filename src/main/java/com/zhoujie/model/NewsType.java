@@ -75,4 +75,11 @@ public class NewsType {
     public void setTypename(String typename) {
         this.typename = typename == null ? null : typename.trim();
     }
+
+	@Override
+	public String toString() {
+		return "NewsType [newstypeid=" + newstypeid + ", typename=" + typename + "]";
+	}
+    
+    
 }

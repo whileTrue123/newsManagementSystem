@@ -89,6 +89,8 @@
   </update>
   
   <select id="getTypeList" resultType="com.zhoujie.model.NewsType">
-  	select * from t_user
+  	select 
+  	<include refid="Base_Column_List" /> 
+  	from t_newstype
   </select>
 </mapper>

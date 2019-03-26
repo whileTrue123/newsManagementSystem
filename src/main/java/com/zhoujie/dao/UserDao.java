@@ -58,4 +58,6 @@ public interface UserDao {
      * @return
      */
     User loginByIdAndPass(User user);
+    
+   
 }

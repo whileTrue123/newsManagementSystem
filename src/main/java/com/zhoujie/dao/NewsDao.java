@@ -1,5 +1,9 @@
 package com.zhoujie.dao;
 
+import java.util.List;
+
+import org.apache.ibatis.annotations.Param;
+
 import com.zhoujie.model.News;
 
 public interface NewsDao {
@@ -58,4 +62,9 @@ public interface NewsDao {
      * @mbggenerated
      */
     int updateByPrimaryKey(News record);
+    
+    List<News> selectByTypeId(Integer newstypeid);
+
+	int newsCounts(@Param("news")News news, @Param("aDate")String aDate, @Param("bDate")String bDate);
+	
 }
