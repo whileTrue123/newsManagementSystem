@@ -244,12 +244,25 @@
   
   <select id="newsCounts" resultType="java.lang.Integer" parameterType="com.zhoujie.model.News">
   	select count(*) from t_news where 1=1
-  	<trim prefix="values (" suffix=")" suffixOverrides="," >
-  		<if test="typeid != null"> and typeId = #{typeid,jdbcType=INTEGER} ,</if>
-  		<if test="title != null"> and title like #{title,jdbcType=VARCHAR} ,</if>
-  		<if test="#{aDate} != null"> and TO_DAYS(publishDate)<![CDATA[ >= ]]>TO_DAYS(#{aDate})</if>
-  		<if test="#{bDate} != null"> and TO_DAYS(publishDate)<![CDATA[ <= ]]>TO_DAYS(#{bDate})</if>
-  		<if test="publishdate >= #{aDate}"></if>
-  	</trim>
+  	<if test="typeid != null"> and typeId = #{typeid,jdbcType=INTEGER}</if>
+  	<if test="title != null"> and title like #{title,jdbcType=VARCHAR} </if>
+  	<if test="#{aDate} != null"> and TO_DAYS(publishDate)<![CDATA[ >= ]]>TO_DAYS(#{aDate})</if>
+  	<if test="#{bDate} != null"> and TO_DAYS(publishDate)<![CDATA[ <= ]]>TO_DAYS(#{bDate})</if>
+  </select>
+  
+  <select id="newsList" resultType="com.zhoujie.model.News">
+  	select 
+  	<include refid="Base_Column_List" /> 
+  	 from t_news t1,t_newsType t2 where t1.typeid=t2.newstypeid 
+  	 <if test="#{news}.getTypeid()!=-1">  and t1.typeId=#{ news}.getTypeid() </if>
+  	 
+  	 <if test="#{news}.getTitle() != null">  and t1.title like CONCAT('%',#{news}.getTitle(),'%') </if>
+  	 <if test="#{bDate} != null"/>  and TO_DAYS(t1.publishDate)<![CDATA[ >= ]]>TO_DAYS(#{bDate})</if>
+  	 <if test="#{aDate} != null"/>  and TO_DAYS(t1.publishDate)<![CDATA[ <= ]]>TO_DAYS(#{aDate})</if>
+  	 
+		sb.append(" order by t1.publishDate desc ");
+		if(pageBean!=null){
+			sb.append(" limit "+pageBean.getStart()+","+pageBean.getPageSize());
+		}
   </select>
 </mapper>

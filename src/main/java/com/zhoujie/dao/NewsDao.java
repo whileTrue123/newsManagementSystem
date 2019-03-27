@@ -5,6 +5,7 @@ import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
 import com.zhoujie.model.News;
+import com.zhoujie.model.PageBean;
 
 public interface NewsDao {
     /**
@@ -66,5 +67,7 @@ public interface NewsDao {
     List<News> selectByTypeId(Integer newstypeid);
 
 	int newsCounts(@Param("news")News news, @Param("aDate")String aDate, @Param("bDate")String bDate);
+	
+	List<News> newsList(@Param("news")News news , PageBean pageBean , @Param("bDate")String bDate , @Param("aDate")String aDate);
 	
 }
