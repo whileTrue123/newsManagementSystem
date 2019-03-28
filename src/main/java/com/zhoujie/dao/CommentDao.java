@@ -1,6 +1,11 @@
 package com.zhoujie.dao;
 
+import java.util.List;
+
+import org.apache.ibatis.annotations.Param;
+
 import com.zhoujie.model.Comment;
+import com.zhoujie.model.News;
 
 public interface CommentDao {
     /**
@@ -50,4 +55,8 @@ public interface CommentDao {
      * @mbggenerated
      */
     int updateByPrimaryKey(Comment record);
+    
+    int CommentCounts(@Param("newsid")Integer newsid, @Param("aDate")String aDate, @Param("bDate")String bDate);
+    
+    List<News> CommentList(@Param("newsid")Integer newsid, @Param("start")int start, @Param("pageSize")int pageSize, @Param("bDate")String bDate, @Param("aDate")String aDate);
 }

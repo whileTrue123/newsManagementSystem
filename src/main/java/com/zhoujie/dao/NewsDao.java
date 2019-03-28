@@ -66,8 +66,8 @@ public interface NewsDao {
     
     List<News> selectByTypeId(Integer newstypeid);
 
-	int newsCounts(@Param("news")News news, @Param("aDate")String aDate, @Param("bDate")String bDate);
+	int newsCounts(@Param("newstypeid")Integer newstypeid, @Param("title")String title , @Param("aDate")String aDate, @Param("bDate")String bDate);
 	
-	List<News> newsList(@Param("news")News news , PageBean pageBean , @Param("bDate")String bDate , @Param("aDate")String aDate);
+	List<News> newsList(@Param("newstypeid")Integer newstypeid, @Param("title")String title , @Param("pageStart")int pageStart , @Param("pageSize")int pageSize , @Param("bDate")String bDate , @Param("aDate")String aDate);
 	
 }
