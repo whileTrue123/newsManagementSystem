@@ -143,22 +143,25 @@
     where commentId = #{commentid,jdbcType=INTEGER}
   </update>
   
-  <select id="CommentCounts" resultType="java.lang.Integer" >
+  <select id="CommentCounts" resultType="java.lang.Integer" >   
   	select count(*) from t_comment where 1=1
-  	<if test="newsid != -1"> and newsId = #{newsid,jdbcType=INTEGER}</if>
-  	<if test="aDate != null and aDate != ''"> and TO_DAYS(commentDate)<![CDATA[ >= ]]>TO_DAYS('#{aDate}')</if>
-  	<if test="bDate != null and bDate != ''"> and TO_DAYS(commentDate)<![CDATA[ <= ]]>TO_DAYS('#{bDate})'</if>
+  	<if test="nid != -1 and nid != null"> and newsId = #{nid}</if>
+  	<if test="aDate != null and aDate != ''"> and TO_DAYS(commentDate)<![CDATA[ >= ]]>TO_DAYS('${aDate}')</if>
+  	<if test="bDate != null and bDate != ''"> and TO_DAYS(commentDate)<![CDATA[ <= ]]>TO_DAYS('${bDate}')</if>
   </select>
   
   <select id="CommentList" resultType="com.zhoujie.model.Comment">
-  	select 
-  	<include refid="Base_Column_List" /> 
+  	 select *
   	 from t_comment t1 , t_news t2 where t1.newsId = t2.newsId 
-  	 <if test="newsid !=-1">  and t1.newsId = #{newsid,jdbcType=INTEGER} </if>
+  	 <if test="nid !=-1">  and t1.newsId = #{nid} </if>
   	 <if test="bDate != null and bDate != ''">  and TO_DAYS(t1.commentDate)<![CDATA[ >= ]]>TO_DAYS('${bDate}')</if>
   	 <if test="aDate != null and aDate != ''">  and TO_DAYS(t1.commentDate)<![CDATA[ <= ]]>TO_DAYS('${aDate}')</if>
   	 order by t1.commentDate desc 
   	 <if test="start !=null and pageSize != null"> limit ${start} , ${pageSize} </if>
   </select>
   
+  <delete id="commentDelete" parameterType="java.lang.String">
+  	delete from t_comment where commentId in (#{commentIds})
+  
+  </delete>
 </mapper>

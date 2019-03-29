@@ -56,7 +56,9 @@ public interface CommentDao {
      */
     int updateByPrimaryKey(Comment record);
     
-    int CommentCounts(@Param("newsid")Integer newsid, @Param("aDate")String aDate, @Param("bDate")String bDate);
+    int CommentCounts(@Param("nid")Integer nid, @Param("aDate")String aDate, @Param("bDate")String bDate);
     
-    List<News> CommentList(@Param("newsid")Integer newsid, @Param("start")int start, @Param("pageSize")int pageSize, @Param("bDate")String bDate, @Param("aDate")String aDate);
+    List<Comment> CommentList(@Param("nid")Integer nid, @Param("start")int start, @Param("pageSize")int pageSize, @Param("bDate")String bDate, @Param("aDate")String aDate);
+    
+    int commentDelete(@Param("commentIds")String commentIds);
 }

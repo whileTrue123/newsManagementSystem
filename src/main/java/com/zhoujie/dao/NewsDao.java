@@ -70,4 +70,7 @@ public interface NewsDao {
 	
 	List<News> newsList(@Param("newstypeid")Integer newstypeid, @Param("title")String title , @Param("pageStart")int pageStart , @Param("pageSize")int pageSize , @Param("bDate")String bDate , @Param("aDate")String aDate);
 	
+	List<News> newestNewsList();
+	
+	List<News> hotNewsList();
 }

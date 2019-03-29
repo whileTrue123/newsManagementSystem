@@ -261,4 +261,12 @@
   	 order by t1.publishDate desc 
   	 <if test="pageStart !=null and pageSize != null"> limit ${pageStart} , ${pageSize} </if>
   </select>
+  
+  <select id="newestNewsList" resultType="com.zhoujie.model.News">
+  	select * from t_news order by publishDate desc limit 0,8 
+  </select>
+  
+  <select id="hotNewsList" resultType="com.zhoujie.model.News">
+  	select * from t_news order by click desc limit 0,8 
+  </select>
 </mapper>
