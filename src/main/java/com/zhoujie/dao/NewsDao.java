@@ -5,7 +5,6 @@ import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
 import com.zhoujie.model.News;
-import com.zhoujie.model.PageBean;
 
 public interface NewsDao {
     /**
@@ -73,4 +72,18 @@ public interface NewsDao {
 	List<News> newestNewsList();
 	
 	List<News> hotNewsList();
+	
+	List<News> imageNewsList();
+	
+	List<News> headNewsList();
+	
+	List<News> hotSpotNewsList();
+	
+	List<News> oneSubList(@Param("newstypeid")Integer newstypeid);
+
+	void newsClickCount(Integer newsId);
+	
+	News getDownPageId(Integer newsId);
+	
+	News getUpPageId(Integer newsId);
 }

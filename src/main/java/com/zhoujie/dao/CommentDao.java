@@ -1,5 +1,6 @@
 package com.zhoujie.dao;
 
+import java.sql.Connection;
 import java.util.List;
 
 import org.apache.ibatis.annotations.Param;
@@ -61,4 +62,5 @@ public interface CommentDao {
     List<Comment> CommentList(@Param("nid")Integer nid, @Param("start")int start, @Param("pageSize")int pageSize, @Param("bDate")String bDate, @Param("aDate")String aDate);
     
     int commentDelete(@Param("commentIds")String commentIds);
+ 
 }
