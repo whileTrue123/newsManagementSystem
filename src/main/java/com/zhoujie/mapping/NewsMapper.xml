@@ -250,7 +250,7 @@
   
   <select id="newsList" resultType="com.zhoujie.model.News">
   	select 
-  	<include refid="Base_Column_List" /> 
+  	* 
   	 from t_news t1,t_newsType t2 where t1.typeId=t2.newsTypeId 
   	 <if test="newstypeid !=-1">  and t1.typeId=newstypeid </if>
   	 <if test="title != null">  and t1.title like CONCAT('%',#{title},'%') </if>
@@ -269,7 +269,7 @@
   </select>
   
   <select id="imageNewsList" resultType="com.zhoujie.model.News">
-  	select * from t_news where isHead=1 order by publishDate desc limit 0,5 
+  	select * from t_news where isImage=1 order by publishDate desc limit 0,5 
   </select>
   
   <select id="headNewsList" resultType="com.zhoujie.model.News">
@@ -290,7 +290,7 @@
   	limit 0,8
   </select>
   
-  <update id="newsClickCount" parameterType="java.lang.Integer" >
+  <update id="newsClickCount" parameterType="java.lang.Integer">
   	update t_news set click=click+1 where newsId = #{newsid,jdbcType=INTEGER}
   </update>
   
