@@ -1,0 +1,25 @@
+2019-03-21 15:05:57.770 DEBUG [main] org.apache.ibatis.logging.LogFactory.setImplementation():115 -Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2019-03-21 15:08:24.172 DEBUG [main] org.apache.ibatis.logging.LogFactory.setImplementation():115 -Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2019-03-21 15:09:48.584 DEBUG [main] org.apache.ibatis.logging.LogFactory.setImplementation():115 -Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2019-03-21 15:14:13.665 DEBUG [main] org.apache.ibatis.logging.LogFactory.setImplementation():115 -Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2019-03-21 15:28:34.610 DEBUG [main] org.apache.ibatis.logging.LogFactory.setImplementation():115 -Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2019-03-21 15:35:07.022 DEBUG [main] org.apache.ibatis.logging.LogFactory.setImplementation():115 -Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2019-03-21 15:41:14.593 DEBUG [main] org.apache.ibatis.logging.LogFactory.setImplementation():115 -Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2019-03-21 15:53:58.943 DEBUG [main] org.apache.ibatis.logging.LogFactory.setImplementation():115 -Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2019-03-21 15:57:26.734 DEBUG [main] org.apache.ibatis.logging.LogFactory.setImplementation():115 -Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2019-03-21 16:03:03.831 DEBUG [main] org.apache.ibatis.logging.LogFactory.setImplementation():115 -Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2019-03-21 16:15:33.469 DEBUG [main] org.apache.ibatis.logging.LogFactory.setImplementation():115 -Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2019-03-21 16:15:34.436 DEBUG [main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory():358 -Property 'configLocation' not specified, using default MyBatis Configuration
+2019-03-21 16:15:34.659 DEBUG [main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory():468 -Parsed mapper file: 'file [C:\workspace\newsManagementSystem\target\classes\com\zhoujie\mapping\CommentMapper.xml]'
+2019-03-21 16:15:34.676 DEBUG [main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory():468 -Parsed mapper file: 'file [C:\workspace\newsManagementSystem\target\classes\com\zhoujie\mapping\NewsMapper.xml]'
+2019-03-21 16:15:34.695 DEBUG [main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory():358 -Property 'configLocation' not specified, using default MyBatis Configuration
+2019-03-21 16:15:34.706 DEBUG [main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory():468 -Parsed mapper file: 'file [C:\workspace\newsManagementSystem\target\classes\com\zhoujie\mapping\CommentMapper.xml]'
+2019-03-21 16:15:34.725 DEBUG [main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory():468 -Parsed mapper file: 'file [C:\workspace\newsManagementSystem\target\classes\com\zhoujie\mapping\NewsMapper.xml]'
+2019-03-21 16:15:34.740 DEBUG [main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory():358 -Property 'configLocation' not specified, using default MyBatis Configuration
+2019-03-21 16:15:34.761 DEBUG [main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory():468 -Parsed mapper file: 'file [C:\workspace\newsManagementSystem\target\classes\com\zhoujie\mapping\CommentMapper.xml]'
+2019-03-21 16:15:34.781 DEBUG [main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory():468 -Parsed mapper file: 'file [C:\workspace\newsManagementSystem\target\classes\com\zhoujie\mapping\NewsMapper.xml]'
+2019-03-21 16:15:34.797 DEBUG [main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory():358 -Property 'configLocation' not specified, using default MyBatis Configuration
+2019-03-21 16:15:34.807 DEBUG [main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory():468 -Parsed mapper file: 'file [C:\workspace\newsManagementSystem\target\classes\com\zhoujie\mapping\CommentMapper.xml]'
+2019-03-21 16:15:34.819 DEBUG [main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory():468 -Parsed mapper file: 'file [C:\workspace\newsManagementSystem\target\classes\com\zhoujie\mapping\NewsMapper.xml]'
+2019-03-21 16:21:00.361 DEBUG [main] org.apache.ibatis.logging.LogFactory.setImplementation():115 -Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2019-03-21 16:24:03.516 DEBUG [main] org.apache.ibatis.logging.LogFactory.setImplementation():115 -Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
